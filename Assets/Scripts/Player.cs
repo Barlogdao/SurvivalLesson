@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;    //Allows us to use UI.
-using Completed;
+
 
 //Player inherits from MovingObject, our base class for objects that can move, Enemy also inherits from this.
 public class Player : MovingObject
@@ -159,7 +159,7 @@ public class Player : MovingObject
         if (Move(xDir, yDir, out hit))
         {
             //Call RandomizeSfx of SoundManager to play the move sound, passing in two audio clips to choose from.
-            //SoundManager.instance.RandomizeSfx(moveSound1, moveSound2);
+            SoundManager.instance.RandomizeSfx(moveSound1, moveSound2);
         }
 
         //Since the player has moved and lost food points, check if the game has ended.
